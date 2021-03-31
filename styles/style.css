@@ -1,4 +1,5 @@
 div, h1, h2, h3, h4, p, a {
+  border: solid 1px red;
   margin: 0px;
   padding: 0px;
 }
@@ -183,7 +184,8 @@ div, h1, h2, h3, h4, p, a {
 .table {
   width: 1100px;
 
-  margin-bottom: 100px;
+  margin: 0 0 100px 0;
+  padding: 0;
 
   display: flex;
   flex-wrap: wrap;
@@ -192,7 +194,11 @@ div, h1, h2, h3, h4, p, a {
 
 .table__cell {
   width: 250px;
-  margin-top: 60px;
+
+  margin: 60px 0 0 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .table__heading {
@@ -315,6 +321,10 @@ div, h1, h2, h3, h4, p, a {
   top: 0px;
   right: -210px;
 
+  background-image: url("../images/kaufman-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
   z-index: 0;
 }
 
@@ -339,10 +349,13 @@ div, h1, h2, h3, h4, p, a {
   justify-content: space-between;
 }
 
-.footer__column_content_copyright {
+.footer__column {
   display: flex;
-  flex-basis: 711px;
   flex-direction: column;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
   justify-content: space-between;
 }
 
@@ -359,11 +372,6 @@ div, h1, h2, h3, h4, p, a {
   font-weight: normal;
 
   color: white;
-}
-
-.footer__column_content_info, .footer__column_content_social {
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__column-heading {
